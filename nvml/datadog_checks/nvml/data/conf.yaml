@@ -17,8 +17,22 @@ init_config:
 ## Every instance is scheduled independent of the others.
 #
 instances:
-
-  -
+  - metric_patterns:
+      include:
+        - nvml.device_count
+        - nvml.gpu_utilization
+        - nvml.mem_copy_utilization
+        - nvml.fb_free
+        - nvml.fb_used
+        - nvml.fb_total
+        - nvml.power_usage
+        - nvml.total_energy_consumption
+        - nvml.enc_utilization
+        - nvml.dec_utilization
+        - nvml.pcie_tx_throughput
+        - nvml.pcie_rx_throughput
+        - nvml.temperature
+        - nvml.fan_speed
     ## @param tags - list of strings - optional
     ## A list of tags to attach to every metric and service check emitted by this instance.
     ##
@@ -52,22 +66,6 @@ instances:
     ## A mapping of metrics to include or exclude, with each entry being a regular expression.
     ##
     ## Metrics defined in `exclude` will take precedence in case of overlap.
-    #
-    metric_patterns:
-      include:
-      - nvml.device_count
-      - nvml.gpu_utilization
-      - nvml.mem_copy_utilization
-      - nvml.fb_free
-      - nvml.fb_used
-      - nvml.fb_total
-      - nvml.power_usage
-      - nvml.total_energy_consumption
-      - nvml.enc_utilization
-      - nvml.dec_utilization
-      - nvml.pcie_tx_throughput
-      - nvml.pcie_rx_throughput
-      - nvml.temperature
-      - nvml.fan_speed
+    
     #   exclude:
     #   - <EXCLUDE_REGEX>
