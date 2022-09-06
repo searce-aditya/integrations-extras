@@ -1,8 +1,5 @@
 ## All options defined here are available to all instances.
 #
-ad_identifiers:
-  - ubuntu
-
 
 
 init_config:
