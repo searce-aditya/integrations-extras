@@ -48,8 +48,21 @@ instances:
     ##
     ## Metrics defined in `exclude` will take precedence in case of overlap.
     #
-    # metric_patterns:
-    #   include:
-    #   - <INCLUDE_REGEX>
+    metric_patterns:
+      include:
+      - nvml.device_count
+      - nvml.gpu_utilization
+      - nvml.mem_copy_utilization
+      - nvml.fb_free
+      - nvml.fb_used
+      - nvml.fb_total
+      - nvml.power_usage
+      - nvml.total_energy_consumption
+      - nvml.enc_utilization
+      - nvml.dec_utilization
+      - nvml.pcie_tx_throughput
+      - nvml.pcie_rx_throughput
+      - nvml.temperature
+      - nvml.fan_speed
     #   exclude:
     #   - <EXCLUDE_REGEX>
