@@ -16,6 +16,7 @@ init_config:
 instances:
   - tags: 
       container_name:cuda-simple
+      kube_container_name:cuda-simple
   - metric_patterns:
       include:
         - nvml.device_count
